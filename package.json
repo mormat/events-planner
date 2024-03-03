@@ -1,0 +1,45 @@
+{
+  "name": "events-planner",
+  "version": "0.0.1",
+  "description": "Events planner",
+  "author": "Mathieu Morel",
+  "license": "GPL v2",
+  "keywords": [
+    "calendar",
+    "scheduler",
+    "ui",
+    "planner",
+    "agenda"
+  ],
+  "homepage": "https://github.com/mormat/react-scheduler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mormat/react-scheduler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mormat/react-scheduler/issues"
+  },
+  "main": "src/main.js",
+  "dependencies": {
+    "@mormat/react-scheduler": "^0.0.3",
+    "nedb-promises": "^6.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "electron": "^29.0.1",
+    "electron-builder": "^23.6.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "start": "ELECTRON_ENV=development electron .",
+    "prepare": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development",
+    "build": "electron-builder build --windows --linux AppImage"
+  }
+}
